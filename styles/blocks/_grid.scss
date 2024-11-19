@@ -1,0 +1,28 @@
+.grid {
+  --gridColumns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  gap: 70px;
+
+  @include desktop {
+    gap: 20px;
+  }
+
+  @for $i from 2 through 12 {
+    &--#{$i} {
+      --gridColumns: #{$i};
+    }
+  }
+
+  &--4 {
+    @include mobile {
+      --gridColumns: 2;
+      gap: 90px;
+    }
+
+    @include mobile-s {
+      --gridColumns: 1;
+    }
+  }
+}

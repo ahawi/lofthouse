@@ -1,0 +1,9 @@
+.section {
+  &:not(:first-child) {
+    padding-block: 60px;
+
+    @include tablet {
+      padding-block: 30px;
+    }
+  }
+}
