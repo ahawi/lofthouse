@@ -255,8 +255,54 @@ a {
        column-gap: 39px;
 }
 .header__menu-link {
-  height: 40px;
+  font-size: 14px;
 }
 .header__menu-link:hover {
   color: var(--color-accent);
+}
+
+.hero {
+  margin-top: -100px;
+  display: flex;
+  align-items: center;
+  min-height: 840px;
+  background: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url("../../images/hero/bg.jpg");
+}
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 321px;
+}
+.hero__title {
+  padding-top: 220px;
+  font-size: 48px;
+  font-family: var(--font-accent);
+  color: var(--color-accent);
+  text-align: center;
+  position: relative;
+}
+.hero__title::after {
+  position: absolute;
+  content: "";
+  color: var(--color-accent);
+  width: 40px;
+  aspect-ratio: 1;
+  top: 145%;
+  left: 50%;
+  transform: translate(-50%, -145%);
+  background-image: url("../../images/mouse.svg");
+}
+.hero__contacts {
+  display: flex;
+  -moz-column-gap: 98px;
+       column-gap: 98px;
+  font-size: 18px;
+}
+.hero__contacts-inner {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
 }/*# sourceMappingURL=styles.css.map */
