@@ -3,15 +3,20 @@
 
   display: grid;
   grid-template-columns: repeat(var(--gridColumns), 1fr);
-  gap: 70px;
-
-  @include desktop {
-    gap: 20px;
-  }
 
   @for $i from 2 through 12 {
     &--#{$i} {
       --gridColumns: #{$i};
+    }
+  }
+
+  &--2 {
+    --gridColumns: 2;
+    gap: 30px;
+
+    @include mobile {
+      --gridColumns: 1;
+      row-gap: 50px;
     }
   }
 
