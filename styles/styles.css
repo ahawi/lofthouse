@@ -210,6 +210,20 @@ svg * {
   padding-inline: var(--container-padding-x);
 }
 
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
 body {
   font-family: var(--font-family-base);
   font-weight: 400;
@@ -360,24 +374,27 @@ h1 {
 }
 
 .testimonials {
+  padding-bottom: 120px;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.testimonials::after {
+  content: "II";
+  position: absolute;
+  z-index: -1;
+  top: calc(-30% - 176px);
+  left: calc(50% + 555px);
+  transform: translate(-50%, 30%);
+  font-family: var(--font-family-accent);
+  font-size: 400px;
+  opacity: 0.02;
 }
 .testimonials__list {
   max-width: 800px;
-  position: relative;
 }
-.testimonials__list::after {
-  content: attr(data-title);
-  position: absolute;
-  z-index: -1;
-  top: -0.3em;
-  left: 1.9em;
-  font-family: var(--font-family-accent);
-  font-size: 21vw;
-  opacity: 0.02;
-}
-.testimonials__list__item {
+.testimonials__item {
   white-space: nowrap;
   font-size: 20px;
   display: flex;
@@ -390,7 +407,7 @@ h1 {
 }
 
 .section:not(:first-child) {
-  padding-block: 60px;
+  padding-top: 60px;
 }
 @media (max-width: 1024px) {
   .section:not(:first-child) {

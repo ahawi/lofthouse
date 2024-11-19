@@ -1,21 +1,26 @@
 .testimonials {
+  padding-bottom: 120px;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "II";
+    position: absolute;
+    z-index: -1;
+    top: calc(-30% - 176px);
+    left: calc(50% + 555px);
+    transform: translate(-50%, 30%);
+    font-family: var(--font-family-accent);
+    font-size: 400px;
+    opacity: 0.02;
+  }
 
   &__list {
     max-width: 800px;
-    position: relative;
 
-    &::after {
-      content: attr(data-title);
-      position: absolute;
-      z-index: -1;
-      top: -0.3em;
-      left: 1.9em;
-      font-family: var(--font-family-accent);
-      font-size: 21vw;
-      opacity: 0.02;
-    }
+  }
 
     &__item {
       white-space: nowrap;
@@ -28,5 +33,5 @@
       font-family: var(--font-family-secondary);
       line-height: 1.3;
     }
-  }
+  
 }
