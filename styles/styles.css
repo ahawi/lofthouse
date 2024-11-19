@@ -201,6 +201,10 @@ svg * {
   --font-family-base: "Raleway", sans-serif;
   --font-family-accent: "Playfair Display", sans-serif;
   --font-family-secondary: "Roboto", sans-serif;
+  --input-height: 50px;
+  --input-padding: 12px;
+  --input-color: rgba(255, 255, 255, 0.2);
+  --input-placeholder-color: #bebebe;
   --transition-duration: 0.2s;
 }
 
@@ -380,6 +384,11 @@ h1 {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 1024px) {
+  .testimonials {
+    padding-bottom: 100px;
+  }
+}
 .testimonials::after {
   content: "II";
   position: absolute;
@@ -411,7 +420,7 @@ h1 {
 }
 @media (max-width: 1024px) {
   .section {
-    padding-block: 30px;
+    padding-block: 20px;
   }
 }
 .section:nth-child(2) {
@@ -531,4 +540,100 @@ h1 {
   font-family: var(--font-family-accent);
   color: var(--color-accent);
   font-size: 36px;
+}
+
+.button {
+  height: var(--input-height);
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  font-weight: 700;
+  border: none;
+}
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .button:active {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
+
+.field__input {
+  background-color: var(--color-light);
+  color: var(--color-light);
+  height: var(--input-height);
+  padding: var(--input-padding);
+  text-align: center;
+  background-color: var(--input-color);
+  border: none;
+  width: 100%;
+}
+.field__input::-moz-placeholder {
+  color: var(--input-placeholder-color);
+}
+.field__input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.field__input:focus-visible {
+  outline: none;
+  border: 1px solid var(--color-accent);
+}
+
+.request {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 560px;
+  background-image: linear-gradient(180deg, #242b33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242b33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("../../images/request/bg.jpg");
+}
+@media (max-width: 767px) {
+  .request {
+    height: auto;
+  }
+}
+.request__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+}
+.request__body {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+@media (max-width: 1024px) {
+  .request__body {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+.request__description {
+  line-height: 1.5;
+  flex: 1;
+}
+.request__form {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 35px;
+}
+.request__privacy {
+  font-size: 13px;
+  color: #e7e7e7;
+  align-self: center;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .request__privacy {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -5,6 +5,10 @@
   position: relative;
   overflow: hidden;
 
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
   &::after {
     content: "II";
     position: absolute;
@@ -21,16 +25,15 @@
     max-width: 800px;
   }
 
-    &__item {
-      white-space: nowrap;
-      font-size: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 53px;
-      text-align: center;
-      font-family: var(--font-family-secondary);
-      line-height: 1.3;
-    }
-  
+  &__item {
+    white-space: nowrap;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 53px;
+    text-align: center;
+    font-family: var(--font-family-secondary);
+    line-height: 1.3;
+  }
 }

@@ -1,0 +1,13 @@
+.button {
+  height: var(--input-height);
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  font-weight: 700;
+  border: none;
+
+  @include hover {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
