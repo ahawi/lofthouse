@@ -43,7 +43,6 @@
         top: 230%;
       }
     }
-
   }
 
   &__contacts {
@@ -51,6 +50,11 @@
     display: flex;
     column-gap: 98px;
     white-space: nowrap;
+    margin-left: -58px;
+
+    @include desktop {
+      margin-left: 0;
+    }
 
     @include mobile {
       column-gap: 60px;
