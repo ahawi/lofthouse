@@ -1,28 +1,28 @@
 .hero {
   margin-top: -100px;
 
-  display: flex;
-  align-items: center;
-  min-height: 840px;
+  min-height: 842px;
   background: linear-gradient(
       180deg,
       #242b33 11.98%,
       rgba(45, 52, 60, 0.38) 51.04%,
       #242b33 92.19%
     ),
-    url("../../images/hero/bg.jpg");
+    url("../../images/hero/bg.jpg") center no-repeat;
 
   &__body {
+    padding-top: 296px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    row-gap: 321px;
+    row-gap: 320px;
+
+    @include mobile-s {
+      row-gap: 280px;
+    }
   }
 
   &__title {
-    padding-top: 220px;
-    font-size: 48px;
     font-family: var(--font-accent);
     color: var(--color-accent);
     text-align: center;
@@ -34,18 +34,32 @@
       color: var(--color-accent);
       width: 40px;
       aspect-ratio: 1;
-      top: 145%;
+      top: 275%;
       left: 50%;
-      transform: translate(-50%, -145%);
+      transform: translate(-50%, -275%);
       background-image: url("../../images/mouse.svg");
+
+      @include mobile-s {
+        top: 230%;
+      }
     }
+
   }
 
   &__contacts {
+    font-size: 18px;
     display: flex;
     column-gap: 98px;
-    font-size: 18px;
-    // padding-top: 200px;
+    white-space: nowrap;
+
+    @include mobile {
+      column-gap: 60px;
+    }
+
+    @include mobile-s {
+      flex-direction: column;
+      row-gap: 30px;
+    }
 
     &-inner {
       display: flex;
