@@ -1,0 +1,39 @@
+.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      background: rgba(36, 43, 51, 0.8);
+      transition-duration: var(--transition-duration);
+    }
+
+    @include hover {
+      transition-duration: var(--transition-duration);
+
+      &::before {
+        background: rgba(36, 43, 51, 0.5);
+      }
+      .video__icon {
+        transform: scale(1.1);
+        filter: saturate(1.5);
+      }
+    }
+  }
+
+  &__icon {
+    @include abs-center;
+
+    max-width: 100px;
+    transition-duration: var(--transition-duration);
+  }
+}

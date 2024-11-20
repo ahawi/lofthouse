@@ -1,13 +1,12 @@
 .apartments {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    @include mobile {
-        align-items: center;
-        justify-content: center;
-        max-width: 100%;
-    }
-  
+  @include mobile {
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
 
   &__title {
     padding-bottom: 88px;
@@ -19,10 +18,12 @@
     overflow: hidden;
     width: 100%;
 
-    &:hover &-image {
-      transform: scale(1.1);
-      transition-duration: var(--transition-duration);
-      filter: contrast(110%) brightness(1.01) saturate(1.2);
+    @include hover {
+      .apartments__link-image {
+        transform: scale(1.1);
+        transition-duration: var(--transition-duration);
+        filter: contrast(110%) brightness(1.01) saturate(1.2);
+      }
     }
 
     &::before {
