@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -87,11 +87,6 @@
                       fill="white"
                     />
                   </g>
-                  <defs>
-                    <clipPath id="clip0_1_41">
-                      <rect width="21" height="21" fill="white" />
-                    </clipPath>
-                  </defs>
                 </svg>
                 <a href="tel:88121234567">8 (812) 123-45-67</a>
               </div>
@@ -252,6 +247,7 @@
                 <div class="request__field field">
                   <label class="visually-hidden" for="tel">Ваш телефон</label>
                   <input
+                    data-tel-input
                     type="tel"
                     class="field__input"
                     id="tel"
@@ -308,21 +304,22 @@
               базу.
             </p>
             <div class="questions__field field">
-              <label class="visually-hidden" for="name">Ваше имя</label>
+              <label class="visually-hidden" for="name1">Ваше имя</label>
               <input
                 class="field__input"
-                name="name"
-                id="name"
+                name="name1"
+                id="name1"
                 placeholder="Ваше имя"
                 autocomplete="off"
               />
             </div>
             <div class="questions__field field">
-              <label class="visually-hidden" for="tel">Ваш телефон</label>
+              <label class="visually-hidden" for="tel1">Ваш телефон</label>
               <input
+                data-tel-input
                 type="tel"
                 class="field__input"
-                id="tel"
+                id="tel1"
                 placeholder="Ваш телефон"
                 autocomplete="off"
               />
@@ -465,16 +462,6 @@
                       fill="white"
                     />
                   </g>
-                  <defs>
-                    <clipPath id="clip0_3_108">
-                      <rect
-                        width="21.3389"
-                        height="20"
-                        fill="white"
-                        transform="translate(0.707092)"
-                      />
-                    </clipPath>
-                  </defs>
                 </svg>
               </a>
             </li>
@@ -482,6 +469,8 @@
         </div>
       </div>
     </footer>
+    <script src="./js/libs/phoneMask/mask.js"></script>
+    <script src="./js/libs/phoneMask/mask_list.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
