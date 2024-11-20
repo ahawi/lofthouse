@@ -306,6 +306,7 @@ h1 {
 
 .hero {
   margin-top: -100px;
+  padding-bottom: 120px;
   min-height: 842px;
   background-image: linear-gradient(180deg, #242b33 11.98%, rgba(45, 52, 60, 0.38) 51.04%, #242b33 92.19%), url("../../images/hero/bg.jpg");
   background-position: center center;
@@ -392,13 +393,13 @@ h1 {
 .testimonials::after {
   content: "II";
   position: absolute;
-  z-index: -1;
-  top: calc(-30% - 176px);
-  left: calc(50% + 555px);
-  transform: translate(-50%, 30%);
-  font-family: var(--font-family-accent);
-  font-size: 400px;
   opacity: 0.02;
+  top: 0;
+  left: calc(50% + 510px);
+  transform: translate(-50%, 0%);
+  line-height: 0.6;
+  font-size: 400px;
+  font-family: var(--font-family-accent);
 }
 .testimonials__list {
   max-width: 800px;
@@ -413,18 +414,6 @@ h1 {
   text-align: center;
   font-family: var(--font-family-secondary);
   line-height: 1.3;
-}
-
-.section {
-  padding-bottom: 60px;
-}
-@media (max-width: 1024px) {
-  .section {
-    padding-block: 20px;
-  }
-}
-.section:nth-child(2) {
-  padding-block: 0;
 }
 
 .grid {
@@ -501,6 +490,21 @@ h1 {
   display: flex;
   flex-direction: column;
 }
+.apartments-cards {
+  padding-top: 54px;
+  position: relative;
+}
+.apartments-cards::before {
+  content: "III";
+  position: absolute;
+  opacity: 0.02;
+  top: 0;
+  right: calc(50% + 555px);
+  transform: translate(50%, 0%);
+  line-height: 0.6;
+  font-size: 400px;
+  font-family: var(--font-family-accent);
+}
 @media (max-width: 767px) {
   .apartments {
     align-items: center;
@@ -509,7 +513,7 @@ h1 {
   }
 }
 .apartments__title {
-  padding-bottom: 88px;
+  padding-bottom: 34px;
 }
 .apartments__link {
   position: relative;
@@ -664,6 +668,25 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 180px;
+  position: relative;
+  overflow: hidden;
+}
+.video::after {
+  content: "IV";
+  position: absolute;
+  opacity: 0.02;
+  top: 20%;
+  left: calc(50% + 555px);
+  transform: translate(-50%, 20%);
+  line-height: 0.6;
+  font-size: 400px;
+  font-family: var(--font-family-accent);
+}
+@media (max-width: 1024px) {
+  .video {
+    padding-bottom: 100px;
+  }
 }
 .video__link {
   position: relative;
@@ -711,17 +734,41 @@ h1 {
   transition-duration: var(--transition-duration);
 }
 
+.map {
+  position: relative;
+}
+.map::before {
+  content: "V";
+  position: absolute;
+  opacity: 0.02;
+  top: 17%;
+  right: calc(50% + 555px);
+  transform: translate(50%, 0%);
+  line-height: 0.6;
+  z-index: -1;
+  font-size: 400px;
+  font-family: var(--font-family-accent);
+}
 .map__title {
-  padding-top: 120px;
-  padding-bottom: 88px;
+  padding-bottom: 34px;
 }
 @media (max-width: 767px) {
   .map__title {
-    padding-bottom: 60px;
     text-align: center;
   }
 }
+.map__image {
+  padding-top: 54px;
+}
 
+.questions {
+  padding-block: 180px;
+}
+@media (max-width: 1024px) {
+  .questions {
+    padding-block: 100px;
+  }
+}
 .questions__title {
   padding-bottom: 50px;
 }
@@ -777,6 +824,16 @@ h1 {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
+}
+@media (hover: hover) {
+  .footer__soc1als-link:hover {
+    color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .footer__soc1als-link:active {
+    color: var(--color-accent);
+  }
 }
 .footer__email {
   font-weight: 700;

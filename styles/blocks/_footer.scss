@@ -45,6 +45,13 @@
       display: flex;
       column-gap: 20px;
     }
+
+    &-link {
+      @include hover {
+        color: var(--color-accent);
+      }
+
+    }
   }
 
   &__email {

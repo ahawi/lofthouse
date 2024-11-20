@@ -12,13 +12,14 @@
   &::after {
     content: "II";
     position: absolute;
-    z-index: -1;
-    top: calc(-30% - 176px);
-    left: calc(50% + 555px);
-    transform: translate(-50%, 30%);
-    font-family: var(--font-family-accent);
-    font-size: 400px;
     opacity: 0.02;
+    top: 0;
+    left: calc(50% + 510px);
+    transform: translate(-50%, 0%);
+    line-height: 0.6;
+
+    font-size: 400px;
+    font-family: var(--font-family-accent);
   }
 
   &__list {

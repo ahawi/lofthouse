@@ -1,4 +1,9 @@
 .questions {
+  padding-block: 180px;
+
+  @include tablet {
+    padding-block: 100px;
+  }
 
   &__title {
     padding-bottom: 50px;
