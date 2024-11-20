@@ -1,0 +1,11 @@
+.map {
+  &__title {
+    padding-top: 120px;
+    padding-bottom: 88px;
+
+    @include mobile {
+      padding-bottom: 60px;
+      text-align: center;
+    }
+  }
+}
