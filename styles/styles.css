@@ -391,15 +391,19 @@ h1 {
   }
 }
 .testimonials::after {
-  content: "II";
   position: absolute;
   opacity: 0.02;
   top: 0;
-  left: calc(50% + 510px);
-  transform: translate(-50%, 0%);
+  right: calc(50% + 555px);
+  transform: translate(50%, 0%);
   line-height: 0.6;
   font-size: 400px;
   font-family: var(--font-family-accent);
+  z-index: -1;
+  content: "II";
+  right: 0;
+  left: calc(50% + 555px);
+  transform: translate(-50%, 0%);
 }
 .testimonials__list {
   max-width: 800px;
@@ -495,7 +499,6 @@ h1 {
   position: relative;
 }
 .apartments-cards::before {
-  content: "III";
   position: absolute;
   opacity: 0.02;
   top: 0;
@@ -504,6 +507,8 @@ h1 {
   line-height: 0.6;
   font-size: 400px;
   font-family: var(--font-family-accent);
+  z-index: -1;
+  content: "III";
 }
 @media (max-width: 767px) {
   .apartments {
@@ -673,15 +678,20 @@ h1 {
   overflow: hidden;
 }
 .video::after {
-  content: "IV";
   position: absolute;
   opacity: 0.02;
-  top: 20%;
-  left: calc(50% + 555px);
-  transform: translate(-50%, 20%);
+  top: 0;
+  right: calc(50% + 555px);
+  transform: translate(50%, 0%);
   line-height: 0.6;
   font-size: 400px;
   font-family: var(--font-family-accent);
+  z-index: -1;
+  content: "IV";
+  top: 24%;
+  left: calc(50% + 555px);
+  right: 0;
+  transform: translate(-50%, 0%);
 }
 @media (max-width: 1024px) {
   .video {
@@ -738,16 +748,17 @@ h1 {
   position: relative;
 }
 .map::before {
-  content: "V";
   position: absolute;
   opacity: 0.02;
-  top: 17%;
+  top: 0;
   right: calc(50% + 555px);
   transform: translate(50%, 0%);
   line-height: 0.6;
-  z-index: -1;
   font-size: 400px;
   font-family: var(--font-family-accent);
+  z-index: -1;
+  content: "V";
+  top: 17%;
 }
 .map__title {
   padding-bottom: 34px;

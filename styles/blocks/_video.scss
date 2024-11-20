@@ -7,16 +7,13 @@
   overflow: hidden;
 
   &::after {
-    content: "IV";
-    position: absolute;
-    opacity: 0.02;
-    top: 20%;
-    left: calc(50% + 555px);
-    transform: translate(-50%, 20%);
-    line-height: 0.6;
+    @include decor;
 
-    font-size: 400px;
-    font-family: var(--font-family-accent);
+    content: "IV";
+    top: 24%;
+    left: calc(50% + 555px);
+    right: 0;
+    transform: translate(-50%, 0%);
   }
 
   @include tablet {

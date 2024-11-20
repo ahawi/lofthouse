@@ -10,16 +10,12 @@
   }
 
   &::after {
-    content: "II";
-    position: absolute;
-    opacity: 0.02;
-    top: 0;
-    left: calc(50% + 510px);
-    transform: translate(-50%, 0%);
-    line-height: 0.6;
+    @include decor;
 
-    font-size: 400px;
-    font-family: var(--font-family-accent);
+    content: "II";
+    right: 0;
+    left: calc(50% + 555px);
+    transform: translate(-50%, 0%);
   }
 
   &__list {
