@@ -30,4 +30,14 @@
       --gridColumns: 1;
     }
   }
+
+  &--questions {
+    --gridColumns: 4;
+    gap: 30px;
+
+    @include mobile {
+      --gridColumns: 1;
+      gap: 20px;
+    }
+  }
 }

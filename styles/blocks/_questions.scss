@@ -1,0 +1,14 @@
+.questions {
+  &__title {
+    padding-bottom: 50px;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__field,
+  &__button {
+    flex: 1;
+  }
+}

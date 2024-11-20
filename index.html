@@ -259,7 +259,7 @@
                     autocomplete="off"
                   />
                 </div>
-                <p class="request__privacy">
+                <p class="field__privacy field">
                   *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
                   базу.
                 </p>
@@ -296,6 +296,41 @@
         <div class="map container">
           <h2 class="map__title title">Район на карте</h2>
           <img src="./images/map.jpg" alt="" class="map__image" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="questions container">
+          <h2 class="questions__title title">Есть вопросы?</h2>
+          <form class="questions__form grid grid--questions">
+            <p class="field__privacy field">
+              *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
+              базу.
+            </p>
+            <div class="questions__field field">
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <input
+                class="field__input"
+                name="name"
+                id="name"
+                placeholder="Ваше имя"
+                autocomplete="off"
+              />
+            </div>
+            <div class="questions__field field">
+              <label class="visually-hidden" for="tel">Ваш телефон</label>
+              <input
+                type="tel"
+                class="field__input"
+                id="tel"
+                placeholder="Ваш телефон"
+                autocomplete="off"
+              />
+            </div>
+            <button class="questions__button button" type="submit">
+              Посмотреть район
+            </button>
+          </form>
         </div>
       </section>
     </main>

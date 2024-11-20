@@ -8,6 +8,7 @@
     background-color: var(--input-color);
     border: none;
     width: 100%;
+    font-size: 14px;
 
     &::placeholder {
       color: var(--input-placeholder-color);
@@ -16,6 +17,17 @@
     &:focus-visible {
       outline: none;
       border: 1px solid var(--color-accent);
+    }
+  }
+
+  &__privacy {
+    font-size: 13px;
+    color: #e7e7e7;
+    align-self: center;
+    text-align: center;
+
+    @include mobile {
+      font-size: 10px;
     }
   }
 }
