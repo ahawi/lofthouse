@@ -31,6 +31,12 @@
       row-gap: 15px;
       flex: 1;
     }
+
+    &-link {
+      @include hover {
+        color: var(--color-accent);
+      }
+    }
   }
 
   &__contacts {
@@ -50,7 +56,6 @@
       @include hover {
         color: var(--color-accent);
       }
-
     }
   }
 
