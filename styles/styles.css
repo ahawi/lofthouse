@@ -334,12 +334,13 @@ h1 {
   position: absolute;
   content: "";
   color: var(--color-accent);
-  width: 40px;
-  aspect-ratio: 1;
+  height: 40px;
+  width: 32px;
   top: 275%;
   left: 50%;
   transform: translate(-50%, -275%);
   background-image: url("../../images/mouse.svg");
+  cursor: pointer;
 }
 @media (max-width: 480px) {
   .hero__title::after {

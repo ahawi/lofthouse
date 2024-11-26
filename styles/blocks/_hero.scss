@@ -35,12 +35,13 @@
       position: absolute;
       content: "";
       color: var(--color-accent);
-      width: 40px;
-      aspect-ratio: 1;
+      height: 40px;
+      width: 32px;
       top: 275%;
       left: 50%;
       transform: translate(-50%, -275%);
       background-image: url("../../images/mouse.svg");
+      cursor: pointer;
 
       @include mobile-s {
         top: 230%;
@@ -72,7 +73,6 @@
       display: flex;
       align-items: center;
       column-gap: 14px;
-
     }
   }
 }

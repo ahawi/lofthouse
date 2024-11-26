@@ -57,3 +57,14 @@ document.querySelectorAll("[data-tel-input]").forEach(function (input) {
     input.value = formattedValue;
   });
 });
+
+// мышь в хиро
+const heroTitle = document.querySelector(".hero__title");
+const apartmentsSection = document.querySelector(".apartments");
+
+heroTitle.addEventListener("click", function (event) {
+  window.scrollTo({
+    top: apartmentsSection.offsetTop - 88,
+    behavior: "smooth",
+  });
+});
