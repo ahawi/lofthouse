@@ -1,8 +1,9 @@
-document.querySelectorAll("[data-tel-input]").forEach(function (input) {
+function formatPhoneNumber(input) {
   input.addEventListener("input", function () {
     let value = input.value.replace(/\D/g, "");
     let formattedValue = "";
     let index = 0;
+    let maxLength;
 
     if (value[0] === "7") {
       formattedValue += "+7";
@@ -21,21 +22,12 @@ document.querySelectorAll("[data-tel-input]").forEach(function (input) {
       if (index === 1) formattedValue += " (";
       else if (index === 4) formattedValue += ") ";
       else if (index === 7 || index === 9) formattedValue += " - ";
-      formattedValue += value[i];
-      i++;
+      formattedValue += value[index];
+      index++;
     }
 
     input.value = formattedValue;
   });
-});
+}
 
-// мышь в хиро
-const heroTitle = document.querySelector(".hero__title");
-const apartmentsSection = document.querySelector(".apartments");
-
-heroTitle.addEventListener("click", function () {
-  window.scrollTo({
-    top: apartmentsSection.offsetTop - 88,
-    behavior: "smooth",
-  });
-});
+document.querySelectorAll("[data-tel-input]").forEach(formatPhoneNumber);

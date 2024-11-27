@@ -2,7 +2,7 @@
   margin-top: -100px;
   padding-bottom: 120px;
 
-  min-height: 842px;
+  height: 842px;
   background-image: linear-gradient(
       180deg,
       #242b33 11.98%,
@@ -18,10 +18,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 320px;
+    // row-gap: 320px;
 
     @include mobile-s {
-      row-gap: 280px;
+      // row-gap: 280px;
     }
   }
 
@@ -29,19 +29,19 @@
     font-family: var(--font-family-accent);
     color: var(--color-accent);
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
 
-    &::after {
-      position: absolute;
-      content: "";
-      color: var(--color-accent);
-      height: 40px;
-      width: 32px;
-      top: 275%;
-      left: 50%;
-      transform: translate(-50%, -275%);
-      background-image: url("../../images/mouse.svg");
-      cursor: pointer;
+    &-image {
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        transform: scale(1.2);
+        filter: sepia(100%);
+      }
 
       @include mobile-s {
         top: 230%;
@@ -50,23 +50,22 @@
   }
 
   &__contacts {
+    margin-top: 200px;
     font-size: 18px;
     display: flex;
     column-gap: 98px;
     white-space: nowrap;
     margin-left: -58px;
 
-    @include desktop {
-      margin-left: 0;
-    }
-
     @include mobile {
-      column-gap: 60px;
+      margin-left: 0;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 5px;
     }
 
     @include mobile-s {
-      flex-direction: column;
-      row-gap: 30px;
+      margin-top: 100px;
     }
 
     &-inner {
