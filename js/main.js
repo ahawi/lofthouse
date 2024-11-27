@@ -1,6 +1,6 @@
 document.querySelectorAll("[data-tel-input]").forEach(function (input) {
-  input.addEventListener("input", function (event) {
-    let value = input.value.replace(/\D/g, ""); // Убираем все нецифровые символы
+  input.addEventListener("input", function () {
+    let value = input.value.replace(/\D/g, "");
     let formattedValue = "";
     let i = 0;
 
@@ -17,43 +17,14 @@ document.querySelectorAll("[data-tel-input]").forEach(function (input) {
       return;
     }
 
-    // Форматируем номер, ограничивая ввод
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += " (" + value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += ") " + value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += " - " + value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += " - " + value[i++];
-    }
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
+    while (i < value.length && formattedValue.length < maxLength) {
+      if (i === 1) formattedValue += " (";
+      else if (i === 4) formattedValue += ") ";
+      else if (i === 7 || i === 9) formattedValue += " - ";
+      formattedValue += value[i];
+      i++;
     }
 
-    if (i < value.length && formattedValue.length < maxLength) {
-      formattedValue += value[i++];
-    }
-
-    // Обновляем значение поля ввода
     input.value = formattedValue;
   });
 });
@@ -62,7 +33,7 @@ document.querySelectorAll("[data-tel-input]").forEach(function (input) {
 const heroTitle = document.querySelector(".hero__title");
 const apartmentsSection = document.querySelector(".apartments");
 
-heroTitle.addEventListener("click", function (event) {
+heroTitle.addEventListener("click", function () {
   window.scrollTo({
     top: apartmentsSection.offsetTop - 88,
     behavior: "smooth",
